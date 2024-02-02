@@ -16,7 +16,7 @@ The game evolves in turns, often referred to as ticks or steps. At each step, th
 
 ## Implementation
 
-The deployed version can be seen [here](conways-game-of-life.havriutkin.com) 
+The deployed version can be seen [here](https://conways-game-of-life.havriutkin.com) 
 The provided code implements Conway's Game of Life in a web environment using JavaScript and HTML5 Canvas for rendering. Here's a brief overview of the implementation details:
 
 ### World State
