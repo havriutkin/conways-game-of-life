@@ -8,19 +8,59 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
+        <article>
+            <h1>Conway's Game Of Life</h1>
+
+            <h2>Description: </h2>
+            <p>
+                Conway's Game of Life is a cellular automaton devised by the British mathematician 
+                John Horton Conway in 1970. It's a zero-player game, meaning that its evolution 
+                is determined by its initial state, requiring no further input from human players. 
+                The game is played on an infinite two-dimensional grid of square cells, each of which 
+                is in one of two possible states, alive or dead. Every cell interacts with its eight neighbors, 
+                which are the cells adjacent to it horizontally, vertically, or diagonally.
+            </p>
+
+            <h2>Rules: </h2>
+            <p>
+                The game evolves in turns, often referred to as ticks or steps. At each step, the following transitions occur:<br>
+                1. <strong>Birth:</strong> A dead cell with exactly three live neighbors becomes a live cell. <br>
+                2. <strong>Death by isolation:</strong> A live cell with fewer than two live neighbors dies. <br>
+                3. <strong>Death by overcrowding:</strong> A live cell with more than three live neighbors dies. <br>
+                4. <strong>Survival:</strong> A live cell with two or three live neighbors continues to live. <br>
+            </p>
+
+            <h2>Contacts: </h2>
+            <p>
+                Implemented by <i>Vladyslav Havriutkin</i> <br>
+                <a href="https://github.com/havriutkin/">GitHub</a>
+            </p>
+
+        </article>
+
         <main>
             <canvas id="canvas" width="500px" height="500px">
             </canvas>
 
             <div id="options">
                 <div class="options-group">
+                    <h3 id="status">Status: </h3>
+                </div>
+                <div class="options-group">
                     <button id="start">START</button>
                     <button id="stop">STOP</button>
                     <button id="clear">CLEAR</button>
                 </div>
                 <div class="options-group">
-                    <input id="speed" type="range" min="1" max="60" value="2" class="slider">
-                    <input id="scale" type="range" min="25" max="100" value="25" class="slider">
+                    <div>
+                        <label for="speed">Speed</label>
+                        <input name="speed" id="speed" type="range" min="1" max="60" value="2" class="slider">
+                    </div>
+                    
+                    <div>
+                        <label for="scale">Scale</label>
+                        <input name="scale" id="scale" type="range" min="25" max="100" value="25" class="slider">
+                    </div>
                 </div>
             </div>
         </main>

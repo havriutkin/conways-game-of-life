@@ -55,7 +55,7 @@ class Square {
 
     draw(){
         if (this.alive) {
-            this.ctx.fillStyle = 'red';
+            this.ctx.fillStyle = '#00ADB5';
             this.ctx.fillRect(this.x * this.worldState.scaleFactor, 
                                 this.y * this.worldState.scaleFactor, 
                                 this.worldState.scaleFactor, 
@@ -193,7 +193,7 @@ class Canvas{
 
 const myCanvas = new Canvas(worldState);
 
-
+const statusHeader = document.getElementById('status');
 const startButton = document.getElementById('start');
 const stopButton = document.getElementById('stop');
 const clearButton = document.getElementById('clear');
@@ -220,6 +220,7 @@ function mainLoop(timestamp){
         lastTime = timestamp
         myCanvas.update();
         myCanvas.draw();
+        statusHeader.innerHTML = `Status: ${worldState.started ? 'Running' : 'Idle'}`;
     }
     requestAnimationFrame(mainLoop);
 }
