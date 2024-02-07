@@ -61,7 +61,7 @@ main {
 button {
     border: 1px solid black;
     background-color: #393E46;
-    width: 30%;
+    width: fit-content;
     font-size: large;
     transition: background-color 0.3s ease-in;
     transition: scale 0.25s ease-in-out;
@@ -76,4 +76,26 @@ button:hover {
 button:active{
     scale: 0.9;
     background-color: grey;
+}
+
+
+/* When the browser window is 600px or less, change the background color to lightgreen */
+@media screen and (max-width: 1200px) {
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 950px) {
+    * {
+        font-size: 20px;
+    }
+    .options-group {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    article {
+        width: 70%;
+    }
 }
